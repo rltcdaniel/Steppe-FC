@@ -155,10 +155,14 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 2.5rem 1.25rem 4rem
 
 /* Equipos */
 .team-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 0.8rem; }
-.team-grid li { border: 1px solid var(--border); border-left: 4px solid var(--country-accent); border-radius: 8px; padding: 0.8rem 1rem; background: var(--surface); font-size: 0.92rem; }
+.team-grid li { border: 1px solid var(--border); border-left: 4px solid var(--country-accent); border-radius: 8px; padding: 0.9rem 1rem 1rem; background: var(--surface); font-size: 0.92rem; }
 .team-grid .team-name { font-weight: 600; display: block; }
 .team-grid .team-city { color: var(--muted); font-size: 0.82rem; }
+.team-grid .team-desc { margin: 0.5rem 0 0.4rem; font-size: 0.85rem; color: var(--ink); }
 .team-grid .team-note { color: var(--muted); font-size: 0.8rem; display: block; margin-top: 0.3rem; }
+.team-links { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.6rem; }
+.team-links a { font-size: 0.78rem; padding: 0.25rem 0.6rem; border: 1px solid var(--border); border-radius: 999px; text-decoration: none; color: var(--muted); }
+.team-links a:hover { border-color: var(--country-accent); color: var(--ink); }
 
 /* Tablas */
 table { width: 100%; border-collapse: collapse; font-size: 0.9rem; background: var(--surface); }
