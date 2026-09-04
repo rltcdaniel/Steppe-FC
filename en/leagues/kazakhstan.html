@@ -10,7 +10,7 @@
   <link rel="alternate" hreflang="x-default" href="https://steppefc.com/es/ligas/kazajistan.html">
   <link rel="stylesheet" href="../../css/style.css">
 </head>
-<body>
+<body class="country-kz">
   <header class="site-header">
     <a href="../../en/" class="logo">Steppe FC</a>
     <nav>
@@ -26,12 +26,12 @@
       <li><a href="../../en/contact.html">Contact</a></li>
       </ul>
     </nav>
-    <div class="lang-switch"><a href="../../es/ligas/kazajistan.html">ES</a> · <a href="../../en/leagues/kazakhstan.html">EN</a></div>
+    <div class="lang-switch"><a href="../../es/ligas/kazajistan.html">ES</a><a href="../../en/leagues/kazakhstan.html" class="active">EN</a></div>
   </header>
 
   <main>
-<h1>Kazakhstan</h1>
-    <p><a href="../../en/leagues/">&larr; Back to Leagues</a></p>
+<div class="country-masthead"><span class="flag-dot"></span><h1>Kazakhstan</h1></div>
+    <a class="back-link" href="index.html">&larr; Back to Leagues</a>
     <nav class="section-nav">
       <a href="#context">Context</a>
       <a href="#standings">Standings</a>
@@ -50,12 +50,11 @@
 
     <section id="standings">
       <h2>Standings</h2>
+      <div class="table-wrap">
       <table>
-        <thead>
-          <tr><th>Pos</th><th>Team</th><th>City</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>Pts</th></tr>
-        </thead>
+        <thead><tr><th>Pos</th><th>Team</th><th>City</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>Pts</th></tr></thead>
         <tbody>
-          <tr><td>1</td><td>Ordabasy</td><td>Shymkent</td><td>17</td><td>12</td><td>4</td><td>1</td><td>30</td><td>12</td><td>40</td></tr>
+          <tr class="zone-qualify"><td>1</td><td>Ordabasy</td><td>Shymkent</td><td>17</td><td>12</td><td>4</td><td>1</td><td>30</td><td>12</td><td>40</td></tr>
           <tr><td>2</td><td>Kairat Almaty</td><td>Almaty</td><td>18</td><td>11</td><td>6</td><td>1</td><td>34</td><td>12</td><td>39</td></tr>
           <tr><td>3</td><td>Astana</td><td>Astana</td><td>17</td><td>8</td><td>5</td><td>4</td><td>25</td><td>19</td><td>29</td></tr>
           <tr><td>4</td><td>Okzhetpes</td><td>Kokshetau</td><td>17</td><td>7</td><td>6</td><td>4</td><td>22</td><td>24</td><td>27</td></tr>
@@ -70,31 +69,36 @@
           <tr><td>13</td><td>Kaspiy</td><td>Aktau</td><td>17</td><td>5</td><td>2</td><td>10</td><td>15</td><td>22</td><td>17</td></tr>
           <tr><td>14</td><td>Altai</td><td>Oskemen</td><td>17</td><td>3</td><td>7</td><td>7</td><td>12</td><td>18</td><td>16</td></tr>
           <tr><td>15</td><td>Kyzylzhar</td><td>Petropavl</td><td>17</td><td>4</td><td>3</td><td>10</td><td>17</td><td>25</td><td>15</td></tr>
-          <tr><td>16</td><td>Irtysh Pavlodar</td><td>Pavlodar</td><td>17</td><td>1</td><td>8</td><td>8</td><td>14</td><td>22</td><td>11</td></tr>
+          <tr class="zone-relegate"><td>16</td><td>Irtysh Pavlodar</td><td>Pavlodar</td><td>17</td><td>1</td><td>8</td><td>8</td><td>14</td><td>22</td><td>11</td></tr>
         </tbody>
       </table>
+      </div>
+      <div class="zone-legend">
+        <span><span class="swatch qualify"></span>Champions League</span>
+        <span><span class="swatch relegate"></span>Relegation</span>
+      </div>
       <p class="note">Approximate figures as of early September 2026 (matchday 17-18), per RSSSF and AiScore. Verify against the official source (kpl.kz) before publishing — the table changes weekly.</p>
     </section>
 
     <section id="teams">
       <h2>Teams</h2>
-      <ul>
-        <li>Ordabasy (Shymkent) — the league's biggest stadium (37,000 capacity).</li>
-        <li>Kairat Almaty (Almaty) — reigning champions (5 titles); made history in the 2025-26 Champions League.</li>
-        <li>Astana (Astana) — the club with the most league titles (7).</li>
-        <li>Okzhetpes (Kokshetau)</li>
-        <li>Yelimay (Semey)</li>
-        <li>Ulytau (Zhezkazgan) — promoted this season after 27 years outside the top flight.</li>
-        <li>Aktobe (Aktobe)</li>
-        <li>Zhenis (Astana)</li>
-        <li>Atyrau (Atyrau)</li>
-        <li>Zhetysu (Taldykorgan)</li>
-        <li>Tobol (Kostanai)</li>
-        <li>Kaisar (Kyzylorda)</li>
-        <li>Kaspiy (Aktau) — one of three clubs promoted to complete the new 16-team format.</li>
-        <li>Altai (Oskemen) — promoted this season; plays some home games in Almaty due to stadium works.</li>
-        <li>Kyzylzhar (Petropavl)</li>
-        <li>Irtysh Pavlodar (Pavlodar) — promoted this season; currently bottom of the table.</li>
+      <ul class="team-grid">
+        <li><span class="team-name">Ordabasy</span><span class="team-city">Shymkent</span><span class="team-note">the league's biggest stadium (37,000 capacity).</span></li>
+        <li><span class="team-name">Kairat Almaty</span><span class="team-city">Almaty</span><span class="team-note">reigning champions (5 titles); made history in the 2025-26 Champions League.</span></li>
+        <li><span class="team-name">Astana</span><span class="team-city">Astana</span><span class="team-note">the club with the most league titles (7).</span></li>
+        <li><span class="team-name">Okzhetpes</span><span class="team-city">Kokshetau</span></li>
+        <li><span class="team-name">Yelimay</span><span class="team-city">Semey</span></li>
+        <li><span class="team-name">Ulytau</span><span class="team-city">Zhezkazgan</span><span class="team-note">promoted this season after 27 years outside the top flight.</span></li>
+        <li><span class="team-name">Aktobe</span><span class="team-city">Aktobe</span></li>
+        <li><span class="team-name">Zhenis</span><span class="team-city">Astana</span></li>
+        <li><span class="team-name">Atyrau</span><span class="team-city">Atyrau</span></li>
+        <li><span class="team-name">Zhetysu</span><span class="team-city">Taldykorgan</span></li>
+        <li><span class="team-name">Tobol</span><span class="team-city">Kostanai</span></li>
+        <li><span class="team-name">Kaisar</span><span class="team-city">Kyzylorda</span></li>
+        <li><span class="team-name">Kaspiy</span><span class="team-city">Aktau</span><span class="team-note">one of three clubs promoted to complete the new 16-team format.</span></li>
+        <li><span class="team-name">Altai</span><span class="team-city">Oskemen</span><span class="team-note">promoted this season; plays some home games in Almaty due to stadium works.</span></li>
+        <li><span class="team-name">Kyzylzhar</span><span class="team-city">Petropavl</span></li>
+        <li><span class="team-name">Irtysh Pavlodar</span><span class="team-city">Pavlodar</span><span class="team-note">promoted this season; currently bottom of the table.</span></li>
       </ul>
       <p class="note">Fun fact: several clubs (Altai, Aktobe, Atyrau, Yelimay, Zhetysu, Kaspiy) have played part of the season as home side in a different city due to work on their usual stadium.</p>
     </section>
@@ -102,10 +106,7 @@
     <section id="top-scorers">
       <h2>Top scorers</h2>
       <p class="note">Reliable up-to-date top scorer data for the 2026 season was hard to confirm: sources give low, conflicting figures for matchday 17-18 (e.g. Kairat's Jorginho shows just 3-5 goals depending on the source). The 2025 season's top scorer was Nazmi Gripshi, with 16 goals. Recommend verifying the current top scorers table directly on kpl.kz or Soccerway before publishing this section.</p>
-      <table>
-        <thead><tr><th>Player</th><th>Team</th><th>Goals</th></tr></thead>
-        <tbody><tr><td>TODO — verify</td><td>TODO</td><td>-</td></tr></tbody>
-      </table>
+      <div class="placeholder">Top scorers table pending verification.</div>
     </section>
   </main>
 

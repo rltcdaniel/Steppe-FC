@@ -1,20 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+
 :root {
-  --max-width: 960px;
-  --color-text: #1a1a1a;
-  --color-muted: #666;
-  --color-accent: #185fa5;
-  --color-border: #e2e2e2;
+  --bg: #EEF0F0;
+  --surface: #FFFFFF;
+  --ink: #1A2330;
+  --muted: #5B6570;
+  --border: #DBE0E1;
+  --accent: #B9862E;
+  --accent-ink: #7A5A1E;
+  --radius: 10px;
+  --max-width: 1040px;
+  --country-accent: var(--accent);
 }
 
 * { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  color: var(--color-text);
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'IBM Plex Sans', -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
+h1, h2, .logo, .country-card .country-name, .country-masthead h1 {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.05;
+  color: var(--ink);
+}
+
+h1 { font-size: clamp(2.1rem, 5vw, 3.1rem); margin: 0 0 0.35rem; }
+h2 { font-size: 1.4rem; margin: 0 0 0.9rem; padding-left: 0.65rem; border-left: 4px solid var(--country-accent); }
+
+p { margin: 0 0 1rem; }
+a { color: var(--accent-ink); text-decoration-thickness: 1px; }
+a:hover { color: var(--ink); }
+
+/* Header */
 .site-header {
   display: flex;
   align-items: center;
@@ -23,146 +49,172 @@ body {
   gap: 1rem;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 1.25rem 1rem;
-  border-bottom: 1px solid var(--color-border);
+  padding: 1.15rem 1.25rem;
+  border-bottom: 1px solid var(--border);
 }
 
-.logo {
-  font-weight: 700;
-  font-size: 1.25rem;
-  color: var(--color-text);
-  text-decoration: none;
-}
+.logo { font-size: 1.4rem; text-decoration: none; color: var(--ink); }
 
 .site-header nav ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.3rem;
   list-style: none;
   margin: 0;
   padding: 0;
+  font-size: 0.9rem;
 }
 
 .site-header nav a {
-  color: var(--color-muted);
+  color: var(--muted);
   text-decoration: none;
-  font-size: 0.95rem;
+  padding-bottom: 0.2rem;
+  border-bottom: 2px solid transparent;
 }
 
 .site-header nav a.active,
 .site-header nav a:hover {
-  color: var(--color-accent);
+  color: var(--ink);
+  border-bottom-color: var(--accent);
 }
 
-.lang-switch a {
-  color: var(--color-muted);
-  text-decoration: none;
-  font-size: 0.9rem;
+.lang-switch {
+  display: inline-flex;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+  font-size: 0.8rem;
 }
+.lang-switch a { padding: 0.3rem 0.75rem; text-decoration: none; color: var(--muted); }
+.lang-switch a.active { background: var(--ink); color: var(--surface); }
 
 main {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 2.5rem 1.25rem 4rem;
   min-height: 50vh;
-}
-
-.lang-picker {
-  text-align: center;
-  padding-top: 4rem;
 }
 
 .site-footer {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 1.5rem 1rem;
-  border-top: 1px solid var(--color-border);
-  color: var(--color-muted);
+  padding: 1.5rem 1.25rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
   font-size: 0.85rem;
 }
 
+/* Hero (home + selector de idioma) */
+.hero { padding: 0.5rem 0 1rem; }
+.hero .tagline { color: var(--muted); max-width: 46ch; font-size: 1.08rem; }
+.route-map { width: 100%; height: auto; margin-top: 2rem; }
+.route-map text { font-family: 'IBM Plex Sans', sans-serif; }
+.lang-picker { text-align: left; padding-top: 3rem; }
+.lang-picker .lang-links { margin-top: 1.5rem; display: flex; gap: 0.75rem; }
+.lang-picker .lang-links a {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.5rem 1.1rem;
+  text-decoration: none;
+  color: var(--ink);
+  font-weight: 500;
+}
+.lang-picker .lang-links a:hover { border-color: var(--accent); }
+
+/* Country grid (hub de Ligas) */
 .country-grid {
   list-style: none;
-  margin: 0;
+  margin: 1.5rem 0 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 0.75rem;
-}
-
-.country-grid li a {
-  display: block;
-  padding: 1rem;
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
-  text-decoration: none;
-  color: var(--color-text);
-  font-weight: 500;
-}
-
-.country-grid li a:hover {
-  border-color: var(--color-accent);
-  color: var(--color-accent);
-}
-
-.section-nav {
-  display: flex;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1rem;
-  margin: 1rem 0 2rem;
-  padding-bottom: 0.75rem;
-  border-bottom: 1px solid var(--color-border);
 }
-
-.section-nav a {
-  color: var(--color-muted);
+.country-card {
+  display: block;
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--card-accent, var(--accent));
+  border-radius: var(--radius);
+  padding: 1.1rem 1.2rem;
   text-decoration: none;
-  font-size: 0.9rem;
+  color: var(--ink);
+  background: var(--surface);
 }
+.country-card .country-name { font-size: 1.35rem; display: block; }
+.country-card .country-teaser { color: var(--muted); font-size: 0.85rem; display: block; margin-top: 0.35rem; }
+.country-card:hover { border-top-color: var(--card-accent, var(--accent)); box-shadow: inset 0 0 0 1px var(--card-accent, var(--accent)); }
 
-.section-nav a:hover {
-  color: var(--color-accent);
+/* Masthead de pais */
+.country-masthead {
+  display: flex;
+  align-items: baseline;
+  gap: 0.7rem;
+  border-bottom: 3px solid var(--country-accent);
+  padding-bottom: 1rem;
+  margin-bottom: 0.3rem;
 }
+.country-masthead .flag-dot { width: 13px; height: 13px; border-radius: 50%; background: var(--country-accent); flex: none; }
+.country-masthead h1 { margin: 0; }
 
-section {
-  margin-bottom: 2.5rem;
-}
+.back-link { display: inline-block; margin: 0.9rem 0 0; font-size: 0.88rem; color: var(--muted); text-decoration: none; }
+.back-link:hover { color: var(--accent-ink); }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.9rem;
-}
-
-th, td {
-  text-align: left;
-  padding: 0.5rem 0.75rem;
-  border-bottom: 1px solid var(--color-border);
-}
-
-th {
-  color: var(--color-muted);
-  font-weight: 500;
-}
-
-.note {
+/* Sub-nav de secciones (pills) */
+.section-nav { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 1.4rem 0 2.5rem; }
+.section-nav a {
+  padding: 0.4rem 0.95rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  color: var(--muted);
   font-size: 0.85rem;
-  color: var(--color-muted);
-  font-style: italic;
-  margin-top: 0.5rem;
 }
+.section-nav a:hover { border-color: var(--country-accent); color: var(--ink); }
 
-.blog-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+/* Equipos */
+.team-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 0.75rem; }
+.team-grid li { border: 1px solid var(--border); border-left: 3px solid var(--country-accent); border-radius: 6px; padding: 0.8rem 1rem; background: var(--surface); font-size: 0.92rem; }
+.team-grid .team-name { font-weight: 600; display: block; }
+.team-grid .team-city { color: var(--muted); font-size: 0.82rem; }
+.team-grid .team-note { color: var(--muted); font-size: 0.8rem; display: block; margin-top: 0.3rem; }
 
-.blog-list li {
-  padding: 1rem 0;
-  border-bottom: 1px solid var(--color-border);
-}
+/* Tablas */
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; background: var(--surface); }
+th, td { text-align: left; padding: 0.55rem 0.75rem; border-bottom: 1px solid var(--border); }
+th { color: var(--muted); font-weight: 600; font-size: 0.78rem; background: color-mix(in srgb, var(--country-accent) 12%, var(--surface)); }
+tr.zone-qualify td:first-child { box-shadow: inset 3px 0 0 var(--country-accent); }
+tr.zone-relegate td:first-child { box-shadow: inset 3px 0 0 #B23A2E; }
+.table-wrap { overflow-x: auto; }
+.zone-legend { display: flex; gap: 1.25rem; flex-wrap: wrap; margin-top: 0.6rem; font-size: 0.8rem; color: var(--muted); }
+.zone-legend span { display: inline-flex; align-items: center; gap: 0.4rem; }
+.zone-legend .swatch { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+.zone-legend .swatch.qualify { background: var(--country-accent); }
+.zone-legend .swatch.relegate { background: #B23A2E; }
 
-.blog-list-empty {
-  color: var(--color-muted);
-  font-style: italic;
+/* Placeholder / estado vacio */
+.placeholder { border: 1px dashed var(--border); border-radius: var(--radius); padding: 1rem 1.2rem; color: var(--muted); font-size: 0.9rem; background: color-mix(in srgb, var(--muted) 5%, var(--surface)); }
+
+.note { font-size: 0.85rem; color: var(--muted); margin-top: 0.6rem; }
+section { margin-bottom: 2.75rem; }
+
+.blog-list { list-style: none; padding: 0; margin: 0; }
+.blog-list li { padding: 1rem 0; border-bottom: 1px solid var(--border); }
+.blog-list-empty { color: var(--muted); font-style: italic; }
+
+/* Acentos por pais */
+.country-kz { --country-accent: #00AFCA; }
+.country-uz { --country-accent: #1EB53A; }
+.country-tm { --country-accent: #8C1F3C; }
+.country-kg { --country-accent: #E8112D; }
+.country-tj { --country-accent: #D8A400; }
+
+.kz { --card-accent: #00AFCA; }
+.uz { --card-accent: #1EB53A; }
+.tm { --card-accent: #8C1F3C; }
+.kg { --card-accent: #E8112D; }
+.tj { --card-accent: #D8A400; }
+
+@media (max-width: 560px) {
+  .site-header { padding: 1rem; }
+  main { padding: 2rem 1rem 3rem; }
 }
