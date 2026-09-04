@@ -1,16 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
 
 :root {
-  --bg: #EEF0F0;
+  --bg-top: #E6F2F5;
+  --bg-bottom: #F7F0DC;
   --surface: #FFFFFF;
   --ink: #1A2330;
   --muted: #5B6570;
   --border: #DBE0E1;
   --accent: #B9862E;
   --accent-ink: #7A5A1E;
-  --radius: 10px;
+  --radius: 14px;
   --max-width: 1040px;
   --country-accent: var(--accent);
+  --country-accent-dark: #8A6A20;
 }
 
 * { box-sizing: border-box; }
@@ -18,27 +20,32 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  background: var(--bg);
+  background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
+  background-attachment: fixed;
   color: var(--ink);
   font-family: 'IBM Plex Sans', -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, .logo, .country-card .country-name, .country-masthead h1 {
-  font-family: 'Big Shoulders Display', sans-serif;
-  font-weight: 700;
-  letter-spacing: 0.01em;
-  line-height: 1.05;
-  color: var(--ink);
-}
-
-h1 { font-size: clamp(2.1rem, 5vw, 3.1rem); margin: 0 0 0.35rem; }
-h2 { font-size: 1.4rem; margin: 0 0 0.9rem; padding-left: 0.65rem; border-left: 4px solid var(--country-accent); }
+h1, h2, .logo-text, .country-card .country-name { font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; letter-spacing: 0.01em; line-height: 1.05; color: var(--ink); }
+h1 { font-size: clamp(2.2rem, 5vw, 3.3rem); margin: 0 0 0.35rem; }
+h2 { font-size: 1.45rem; margin: 0 0 0.9rem; padding-left: 0.65rem; border-left: 4px solid var(--country-accent); }
 
 p { margin: 0 0 1rem; }
 a { color: var(--accent-ink); text-decoration-thickness: 1px; }
 a:hover { color: var(--ink); }
+
+/* Cinta de banderas -- firma visual del sitio */
+.flag-ribbon {
+  height: 7px;
+  background: linear-gradient(90deg,
+    #00AFCA 0%, #00AFCA 20%,
+    #1EB53A 20%, #1EB53A 40%,
+    #8C1F3C 40%, #8C1F3C 60%,
+    #E8112D 60%, #E8112D 80%,
+    #D8A400 80%, #D8A400 100%);
+}
 
 /* Header */
 .site-header {
@@ -50,130 +57,72 @@ a:hover { color: var(--ink); }
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 1.15rem 1.25rem;
-  border-bottom: 1px solid var(--border);
 }
 
-.logo { font-size: 1.4rem; text-decoration: none; color: var(--ink); }
+.logo { display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; color: var(--ink); }
+.logo-ball { width: 24px; height: 24px; flex: none; }
+.logo-text { font-size: 1.4rem; }
 
-.site-header nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.3rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  font-size: 0.9rem;
-}
+.site-header nav ul { display: flex; flex-wrap: wrap; gap: 1.3rem; list-style: none; margin: 0; padding: 0; font-size: 0.9rem; }
+.site-header nav a { color: var(--muted); text-decoration: none; padding-bottom: 0.2rem; border-bottom: 2px solid transparent; }
+.site-header nav a.active, .site-header nav a:hover { color: var(--ink); border-bottom-color: var(--accent); }
 
-.site-header nav a {
-  color: var(--muted);
-  text-decoration: none;
-  padding-bottom: 0.2rem;
-  border-bottom: 2px solid transparent;
-}
-
-.site-header nav a.active,
-.site-header nav a:hover {
-  color: var(--ink);
-  border-bottom-color: var(--accent);
-}
-
-.lang-switch {
-  display: inline-flex;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  overflow: hidden;
-  font-size: 0.8rem;
-}
+.lang-switch { display: inline-flex; border: 1px solid var(--border); border-radius: 999px; overflow: hidden; font-size: 0.8rem; background: var(--surface); }
 .lang-switch a { padding: 0.3rem 0.75rem; text-decoration: none; color: var(--muted); }
 .lang-switch a.active { background: var(--ink); color: var(--surface); }
 
-main {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 2.5rem 1.25rem 4rem;
-  min-height: 50vh;
-}
+main { max-width: var(--max-width); margin: 0 auto; padding: 2.5rem 1.25rem 4rem; min-height: 50vh; }
 
-.site-footer {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 1.5rem 1.25rem;
-  border-top: 1px solid var(--border);
-  color: var(--muted);
-  font-size: 0.85rem;
-}
+.site-footer { max-width: var(--max-width); margin: 0 auto; padding: 1.5rem 1.25rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
 
-/* Hero (home + selector de idioma) */
-.hero { padding: 0.5rem 0 1rem; }
+/* Hero (home) -- textura de cesped */
+.hero {
+  background: repeating-linear-gradient(135deg, #E3F1E6 0px, #E3F1E6 42px, #D9EBDC 42px, #D9EBDC 84px);
+  border-radius: var(--radius);
+  padding: 2.6rem 2rem;
+  border: 1px solid #CBE3D0;
+}
 .hero .tagline { color: var(--muted); max-width: 46ch; font-size: 1.08rem; }
 .route-map { width: 100%; height: auto; margin-top: 2rem; }
 .route-map text { font-family: 'IBM Plex Sans', sans-serif; }
+.photo-note { font-size: 0.8rem; color: var(--muted); margin-top: 1.5rem; padding-top: 1rem; border-top: 1px dashed #CBE3D0; }
+
 .lang-picker { text-align: left; padding-top: 3rem; }
 .lang-picker .lang-links { margin-top: 1.5rem; display: flex; gap: 0.75rem; }
-.lang-picker .lang-links a {
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 0.5rem 1.1rem;
-  text-decoration: none;
-  color: var(--ink);
-  font-weight: 500;
-}
+.lang-picker .lang-links a { border: 1px solid var(--border); border-radius: 999px; padding: 0.5rem 1.1rem; text-decoration: none; color: var(--ink); font-weight: 500; background: var(--surface); }
 .lang-picker .lang-links a:hover { border-color: var(--accent); }
 
 /* Country grid (hub de Ligas) */
-.country-grid {
-  list-style: none;
-  margin: 1.5rem 0 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1rem;
-}
-.country-card {
-  display: block;
-  border: 1px solid var(--border);
-  border-top: 4px solid var(--card-accent, var(--accent));
+.country-grid { list-style: none; margin: 1.5rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 1.1rem; }
+.country-card { display: block; border-radius: var(--radius); overflow: hidden; text-decoration: none; color: var(--ink); background: var(--surface); border: 1px solid var(--border); transition: transform 0.15s ease; }
+.country-card:hover { transform: translateY(-2px); }
+.country-card-banner { display: block; padding: 1.5rem 1.2rem 1.15rem; background: linear-gradient(135deg, var(--card-accent, var(--accent)), var(--card-accent-dark, var(--accent-ink))); }
+.country-card .country-name { color: #fff; font-size: 1.35rem; display: block; }
+.country-card-body { display: block; padding: 0.85rem 1.2rem 1.1rem; }
+.country-card .country-teaser { color: var(--muted); font-size: 0.85rem; }
+
+/* Banner de pais */
+.country-banner {
+  background: linear-gradient(135deg, var(--country-accent), var(--country-accent-dark));
   border-radius: var(--radius);
-  padding: 1.1rem 1.2rem;
-  text-decoration: none;
-  color: var(--ink);
-  background: var(--surface);
+  padding: 2.1rem 1.9rem;
+  color: #fff;
+  margin-bottom: 1.75rem;
 }
-.country-card .country-name { font-size: 1.35rem; display: block; }
-.country-card .country-teaser { color: var(--muted); font-size: 0.85rem; display: block; margin-top: 0.35rem; }
-.country-card:hover { border-top-color: var(--card-accent, var(--accent)); box-shadow: inset 0 0 0 1px var(--card-accent, var(--accent)); }
+.country-banner h1 { color: #fff; margin: 0; }
+.country-banner .country-sub { color: rgba(255,255,255,0.88); margin: 0.35rem 0 0; font-size: 1rem; }
 
-/* Masthead de pais */
-.country-masthead {
-  display: flex;
-  align-items: baseline;
-  gap: 0.7rem;
-  border-bottom: 3px solid var(--country-accent);
-  padding-bottom: 1rem;
-  margin-bottom: 0.3rem;
-}
-.country-masthead .flag-dot { width: 13px; height: 13px; border-radius: 50%; background: var(--country-accent); flex: none; }
-.country-masthead h1 { margin: 0; }
-
-.back-link { display: inline-block; margin: 0.9rem 0 0; font-size: 0.88rem; color: var(--muted); text-decoration: none; }
+.back-link { display: inline-block; margin: 0 0 0.5rem; font-size: 0.88rem; color: var(--muted); text-decoration: none; }
 .back-link:hover { color: var(--accent-ink); }
 
 /* Sub-nav de secciones (pills) */
 .section-nav { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 1.4rem 0 2.5rem; }
-.section-nav a {
-  padding: 0.4rem 0.95rem;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  text-decoration: none;
-  color: var(--muted);
-  font-size: 0.85rem;
-}
+.section-nav a { padding: 0.4rem 0.95rem; border-radius: 999px; border: 1px solid var(--border); text-decoration: none; color: var(--muted); font-size: 0.85rem; background: var(--surface); }
 .section-nav a:hover { border-color: var(--country-accent); color: var(--ink); }
 
 /* Equipos */
-.team-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 0.75rem; }
-.team-grid li { border: 1px solid var(--border); border-left: 3px solid var(--country-accent); border-radius: 6px; padding: 0.8rem 1rem; background: var(--surface); font-size: 0.92rem; }
+.team-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 0.8rem; }
+.team-grid li { border: 1px solid var(--border); border-left: 4px solid var(--country-accent); border-radius: 8px; padding: 0.8rem 1rem; background: var(--surface); font-size: 0.92rem; }
 .team-grid .team-name { font-weight: 600; display: block; }
 .team-grid .team-city { color: var(--muted); font-size: 0.82rem; }
 .team-grid .team-note { color: var(--muted); font-size: 0.8rem; display: block; margin-top: 0.3rem; }
@@ -181,10 +130,11 @@ main {
 /* Tablas */
 table { width: 100%; border-collapse: collapse; font-size: 0.9rem; background: var(--surface); }
 th, td { text-align: left; padding: 0.55rem 0.75rem; border-bottom: 1px solid var(--border); }
-th { color: var(--muted); font-weight: 600; font-size: 0.78rem; background: color-mix(in srgb, var(--country-accent) 12%, var(--surface)); }
-tr.zone-qualify td:first-child { box-shadow: inset 3px 0 0 var(--country-accent); }
-tr.zone-relegate td:first-child { box-shadow: inset 3px 0 0 #B23A2E; }
-.table-wrap { overflow-x: auto; }
+th { color: var(--muted); font-weight: 600; font-size: 0.78rem; background: color-mix(in srgb, var(--country-accent) 14%, var(--surface)); }
+tbody tr:nth-child(even) td { background: color-mix(in srgb, var(--country-accent) 4%, var(--surface)); }
+tr.zone-qualify td:first-child { box-shadow: inset 4px 0 0 var(--country-accent); }
+tr.zone-relegate td:first-child { box-shadow: inset 4px 0 0 #B23A2E; }
+.table-wrap { overflow-x: auto; border-radius: 8px; }
 .zone-legend { display: flex; gap: 1.25rem; flex-wrap: wrap; margin-top: 0.6rem; font-size: 0.8rem; color: var(--muted); }
 .zone-legend span { display: inline-flex; align-items: center; gap: 0.4rem; }
 .zone-legend .swatch { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
@@ -192,7 +142,7 @@ tr.zone-relegate td:first-child { box-shadow: inset 3px 0 0 #B23A2E; }
 .zone-legend .swatch.relegate { background: #B23A2E; }
 
 /* Placeholder / estado vacio */
-.placeholder { border: 1px dashed var(--border); border-radius: var(--radius); padding: 1rem 1.2rem; color: var(--muted); font-size: 0.9rem; background: color-mix(in srgb, var(--muted) 5%, var(--surface)); }
+.placeholder { border-left: 4px solid var(--country-accent); border-radius: 8px; padding: 1rem 1.2rem; color: var(--muted); font-size: 0.9rem; background: color-mix(in srgb, var(--country-accent) 6%, var(--surface)); }
 
 .note { font-size: 0.85rem; color: var(--muted); margin-top: 0.6rem; }
 section { margin-bottom: 2.75rem; }
@@ -201,20 +151,16 @@ section { margin-bottom: 2.75rem; }
 .blog-list li { padding: 1rem 0; border-bottom: 1px solid var(--border); }
 .blog-list-empty { color: var(--muted); font-style: italic; }
 
-/* Acentos por pais */
-.country-kz { --country-accent: #00AFCA; }
-.country-uz { --country-accent: #1EB53A; }
-.country-tm { --country-accent: #8C1F3C; }
-.country-kg { --country-accent: #E8112D; }
-.country-tj { --country-accent: #D8A400; }
-
-.kz { --card-accent: #00AFCA; }
-.uz { --card-accent: #1EB53A; }
-.tm { --card-accent: #8C1F3C; }
-.kg { --card-accent: #E8112D; }
-.tj { --card-accent: #D8A400; }
+/* Acentos por pais (banner de pagina + tarjetas del hub) */
+.country-kz, .kz { --country-accent: #00AFCA; --country-accent-dark: #007A94; --card-accent: #00AFCA; --card-accent-dark: #007A94; }
+.country-uz, .uz { --country-accent: #1EB53A; --country-accent-dark: #0F7A24; --card-accent: #1EB53A; --card-accent-dark: #0F7A24; }
+.country-tm, .tm { --country-accent: #8C1F3C; --country-accent-dark: #5E1328; --card-accent: #8C1F3C; --card-accent-dark: #5E1328; }
+.country-kg, .kg { --country-accent: #E8112D; --country-accent-dark: #A50D20; --card-accent: #E8112D; --card-accent-dark: #A50D20; }
+.country-tj, .tj { --country-accent: #D8A400; --country-accent-dark: #8A6A00; --card-accent: #D8A400; --card-accent-dark: #8A6A00; }
 
 @media (max-width: 560px) {
   .site-header { padding: 1rem; }
   main { padding: 2rem 1rem 3rem; }
+  .hero { padding: 1.75rem 1.25rem; }
+  .country-banner { padding: 1.6rem 1.4rem; }
 }
