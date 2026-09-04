@@ -43,47 +43,101 @@
 
     <section id="standings">
       <h2>Standings</h2>
-      <div class="table-wrap"><table>
-        <thead><tr><th>Pos</th><th>Team</th><th>City</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>Pts</th></tr></thead>
-        <tbody><tr class="zone-qualify"><td>1</td><td>Alga</td><td>Bishkek</td><td>16</td><td>11</td><td>5</td><td>0</td><td>33</td><td>14</td><td>38</td></tr>
-          <tr><td>2</td><td>Muras United</td><td>Jalal-Abad</td><td>16</td><td>11</td><td>4</td><td>1</td><td>35</td><td>14</td><td>37</td></tr>
-          <tr><td>3</td><td>FC Özgön</td><td>Özgön</td><td>16</td><td>11</td><td>2</td><td>3</td><td>32</td><td>15</td><td>35</td></tr>
-          <tr><td>4</td><td>Bars Issyk-Kul</td><td>Karakol</td><td>16</td><td>10</td><td>3</td><td>3</td><td>42</td><td>24</td><td>33</td></tr>
-          <tr><td>5</td><td>Asia Talas</td><td>Talas</td><td>16</td><td>10</td><td>3</td><td>3</td><td>38</td><td>27</td><td>33</td></tr>
-          <tr><td>6</td><td>Alay</td><td>Osh</td><td>16</td><td>8</td><td>4</td><td>4</td><td>21</td><td>17</td><td>28</td></tr>
-          <tr><td>7</td><td>OshSU Aldier</td><td>Osh</td><td>16</td><td>6</td><td>5</td><td>5</td><td>24</td><td>24</td><td>23</td></tr>
-          <tr><td>8</td><td>Talant</td><td>Besh-Küngöy</td><td>16</td><td>4</td><td>7</td><td>5</td><td>21</td><td>17</td><td>19</td></tr>
-          <tr><td>9</td><td>Dordoi Bishkek</td><td>Bishkek</td><td>16</td><td>5</td><td>3</td><td>8</td><td>20</td><td>23</td><td>18</td></tr>
-          <tr><td>10</td><td>Neftchi</td><td>Kochkor-Ata</td><td>16</td><td>5</td><td>2</td><td>9</td><td>18</td><td>26</td><td>17</td></tr>
-          <tr><td>11</td><td>Bishkek City</td><td>Bishkek</td><td>16</td><td>4</td><td>5</td><td>7</td><td>15</td><td>22</td><td>17</td></tr>
-          <tr><td>12</td><td>Asiagoal Bishkek</td><td>Bishkek</td><td>16</td><td>3</td><td>6</td><td>7</td><td>19</td><td>28</td><td>15</td></tr>
-          <tr><td>13</td><td>FC Toktogul</td><td>Toktogul</td><td>16</td><td>4</td><td>1</td><td>11</td><td>15</td><td>28</td><td>13</td></tr>
-          <tr><td>14</td><td>Ilbirs Bishkek</td><td>Bishkek</td><td>16</td><td>2</td><td>7</td><td>7</td><td>16</td><td>31</td><td>13</td></tr>
-          <tr class="zone-relegate"><td>15</td><td>Abdysh-Ata</td><td>Kant</td><td>16</td><td>2</td><td>3</td><td>11</td><td>13</td><td>25</td><td>9</td></tr>
-          <tr class="zone-relegate"><td>16</td><td>Kyrgyzaltyn</td><td>Kara-Balta</td><td>16</td><td>0</td><td>4</td><td>12</td><td>13</td><td>40</td><td>4</td></tr></tbody>
-      </table></div>
-      <div class="zone-legend"><span><span class="swatch qualify"></span>AFC Challenge League</span><span><span class="swatch relegate"></span>Relegation (confirmed: 2 spots)</span></div>
-      <p class="note">Figures as of matchday 16, per RSSSF (relegation line confirmed by the source itself). Verify against the official source before publishing.</p>
+      <div class="table-wrap">
+      <table>
+        <thead><tr><th>Pos</th><th>Team</th><th>City</th><th>P</th><th>Diff</th><th>Pts</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>FC Özgön</td><td>Özgön</td><td>22</td><td>+21</td><td>44</td></tr>
+          <tr><td>2</td><td>Bars Issyk-Kul</td><td>Karakol</td><td>21</td><td>+26</td><td>43</td></tr>
+          <tr><td>3</td><td>Muras United</td><td>Jalal-Abad</td><td>21</td><td>+26</td><td>43</td></tr>
+          <tr><td>4</td><td>Alay</td><td>Osh</td><td>21</td><td>+11</td><td>41</td></tr>
+          <tr><td>5</td><td>Asia Talas</td><td>Talas</td><td>21</td><td>+13</td><td>40</td></tr>
+          <tr><td>6</td><td>Alga</td><td>Bishkek</td><td>21</td><td>+13</td><td>39</td></tr>
+          <tr><td>7</td><td>Talant</td><td>Besh-Küngöy</td><td>23</td><td>+5</td><td>30</td></tr>
+          <tr><td>8</td><td>FC Toktogul</td><td>Toktogul</td><td>22</td><td>-5</td><td>30</td></tr>
+          <tr><td>9</td><td>OshSU Aldier</td><td>Osh</td><td>22</td><td>-7</td><td>27</td></tr>
+          <tr><td>10</td><td>Dordoi Bishkek</td><td>Bishkek</td><td>22</td><td>+3</td><td>26</td></tr>
+          <tr><td>11</td><td>Neftchi</td><td>Kochkor-Ata</td><td>21</td><td>-9</td><td>26</td></tr>
+          <tr><td>12</td><td>Ilbirs Bishkek</td><td>Bishkek</td><td>21</td><td>-6</td><td>24</td></tr>
+          <tr><td>13</td><td>Bishkek City</td><td>Bishkek</td><td>21</td><td>-10</td><td>20</td></tr>
+          <tr><td>14</td><td>Asiagoal Bishkek</td><td>Bishkek</td><td>21</td><td>-12</td><td>18</td></tr>
+          <tr class="zone-relegate"><td>15</td><td>Abdysh-Ata</td><td>Kant</td><td>23</td><td>-31</td><td>11</td></tr>
+          <tr class="zone-relegate"><td>16</td><td>Kyrgyzaltyn</td><td>Kara-Balta</td><td>21</td><td>-38</td><td>8</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <div class="zone-legend">
+        <span><span class="swatch qualify"></span>Champion: AFC Challenge League</span>
+        <span><span class="swatch relegate"></span>Relegation (2 spots)</span>
+      </div>
+      <p class="note">Standings pulled directly from Sofascore (matchday 21-23 of 2026). Verify against the official source before publishing — it changes weekly.</p>
     </section>
 
     <section id="teams">
       <h2>Teams</h2>
-      <ul class="team-grid"><li><span class="team-name">Alga</span><span class="team-city">Bishkek</span><span class="team-note">the current league leaders.</span></li>
-        <li><span class="team-name">Muras United</span><span class="team-city">Jalal-Abad</span></li>
-        <li><span class="team-name">FC Özgön</span><span class="team-city">Özgön</span></li>
-        <li><span class="team-name">Bars Issyk-Kul</span><span class="team-city">Karakol</span><span class="team-note">reigning champions (2025 title, their first ever).</span></li>
-        <li><span class="team-name">Asia Talas</span><span class="team-city">Talas</span><span class="team-note">play home games in Bishkek, 300 km from Talas.</span></li>
-        <li><span class="team-name">Alay</span><span class="team-city">Osh</span></li>
-        <li><span class="team-name">OshSU Aldier</span><span class="team-city">Osh</span></li>
-        <li><span class="team-name">Talant</span><span class="team-city">Besh-Küngöy</span></li>
-        <li><span class="team-name">Dordoi Bishkek</span><span class="team-city">Bishkek</span><span class="team-note">the club with the most league titles in history (13), though mid-table this season.</span></li>
-        <li><span class="team-name">Neftchi</span><span class="team-city">Kochkor-Ata</span></li>
-        <li><span class="team-name">Bishkek City</span><span class="team-city">Bishkek</span></li>
-        <li><span class="team-name">Asiagoal Bishkek</span><span class="team-city">Bishkek</span><span class="team-note">play home games in Besh-Küngöy since matchday 8.</span></li>
-        <li><span class="team-name">FC Toktogul</span><span class="team-city">Toktogul</span></li>
-        <li><span class="team-name">Ilbirs Bishkek</span><span class="team-city">Bishkek</span><span class="team-note">play home games in Kant since matchday 9.</span></li>
-        <li><span class="team-name">Abdysh-Ata</span><span class="team-city">Kant</span></li>
-        <li><span class="team-name">Kyrgyzaltyn</span><span class="team-city">Kara-Balta</span></li></ul>
+      <ul class="team-grid">
+        <li><span class="team-name">Alga</span><span class="team-city">Bishkek</span><p class="team-desc">Founded in 1947, one of Bishkek's historic clubs, with several name changes through the 20th century; 5 league titles.</p><div class="team-links">
+          <a href="https://en.wikipedia.org/wiki/FC_Alga_Bishkek" target="_blank" rel="noopener">Wikipedia (EN)</a>
+          <a href="https://www.sofascore.com/football/team/fc-alga-bishkek/254149" target="_blank" rel="noopener">Sofascore</a>
+          </div></li>
+        <li><span class="team-name">Muras United</span><span class="team-city">Jalal-Abad</span><p class="team-desc">Club from Jalal-Abad, in the Kyrgyz side of the Fergana Valley.</p><div class="team-links">
+          <a href="https://en.wikipedia.org/wiki/FC_Muras_United" target="_blank" rel="noopener">Wikipedia (EN)</a>
+          <a href="https://www.sofascore.com/football/team/muras-united/468660" target="_blank" rel="noopener">Sofascore</a>
+          </div></li>
+        <li><span class="team-name">FC Özgön</span><span class="team-city">Özgön</span><p class="team-desc">Represents the city of Özgön (Uzgen), in the Osh region.</p><div class="team-links">
+          <a href="https://en.wikipedia.org/wiki/FC_Uzgen" target="_blank" rel="noopener">Wikipedia (EN)</a>
+          <a href="https://www.sofascore.com/football/team/fc-ozgon/1074643" target="_blank" rel="noopener">Sofascore</a>
+          </div></li>
+        <li><span class="team-name">Bars Issyk-Kul</span><span class="team-city">Karakol</span><p class="team-desc">From Karakol, on the shores of Lake Issyk-Kul; reigning champions, their first-ever title in 2025.</p><div class="team-links">
+          <a href="https://en.wikipedia.org/wiki/FC_Bars" target="_blank" rel="noopener">Wikipedia (EN)</a>
+          <a href="https://www.sofascore.com/football/team/bars/1078992" target="_blank" rel="noopener">Sofascore</a>
+          </div></li>
+        <li><span class="team-name">Asia Talas</span><span class="team-city">Talas</span><p class="team-desc">Club from Talas, though they play home games in Bishkek, 300 km away.</p><div class="team-links">
+          <a href="https://www.sofascore.com/football/team/asia-talas/1168463" target="_blank" rel="noopener">Sofascore</a>
+          </div></li>
+        <li><span class="team-name">Alay</span><span class="team-city">Osh</span><p class="team-desc">From Osh, the country's second-largest city; 4 league titles in their history.</p><div class="team-links">
+          <a href="https://en.wikipedia.org/wiki/FC_Alay" target="_blank" rel="noopener">Wikipedia (EN)</a>
+          <a href="https://www.sofascore.com/football/team/fc-alay/138964" target="_blank" rel="noopener">Sofascore</a>
+          </div></li>
+        <li><span class="team-name">OshSU Aldier</span><span class="team-city">Osh</span><p class="team-desc">Linked to Osh State University.</p><div class="team-links">
+          <a href="https://www.sofascore.com/football/team/oshmu-aldier/475664" target="_blank" rel="noopener">Sofascore</a>
+          </div></li>
+        <li><span class="team-name">Talant</span><span class="team-city">Besh-Küngöy</span><p class="team-desc">Play home games in Besh-Küngöy, near Bishkek.</p><div class="team-links">
+          <a href="https://www.sofascore.com/football/team/fc-talant/383337" target="_blank" rel="noopener">Sofascore</a>
+          </div></li>
+        <li><span class="team-name">Dordoi Bishkek</span><span class="team-city">Bishkek</span><p class="team-desc">The club with the most league titles in history (13), tied to Bishkek's Dordoi market, one of the largest in Central Asia.</p><div class="team-links">
+          <a href="https://en.wikipedia.org/wiki/FC_Dordoi_Bishkek" target="_blank" rel="noopener">Wikipedia (EN)</a>
+          <a href="https://www.sofascore.com/football/team/fc-dordoi-bishkek/186779" target="_blank" rel="noopener">Sofascore</a>
+          <a href="https://www.fc-dordoi.com" target="_blank" rel="noopener">Official site</a>
+          </div></li>
+        <li><span class="team-name">Neftchi</span><span class="team-city">Kochkor-Ata</span><p class="team-desc">From Kochkor-Ata, an oil town; league champions in 2010.</p><div class="team-links">
+          <a href="https://en.wikipedia.org/wiki/FC_Neftchi_Kochkor-Ata" target="_blank" rel="noopener">Wikipedia (EN)</a>
+          <a href="https://www.sofascore.com/football/team/fk-neftchi-kochkor-ata/338858" target="_blank" rel="noopener">Sofascore</a>
+          </div></li>
+        <li><span class="team-name">Bishkek City</span><span class="team-city">Bishkek</span><p class="team-desc">Club from the capital, Bishkek.</p><div class="team-links">
+          <a href="https://en.wikipedia.org/wiki/FC_Bishkek_City" target="_blank" rel="noopener">Wikipedia (EN)</a>
+          <a href="https://www.sofascore.com/football/team/fc-bishkek-city/1078991" target="_blank" rel="noopener">Sofascore</a>
+          </div></li>
+        <li><span class="team-name">Asiagoal Bishkek</span><span class="team-city">Bishkek</span><p class="team-desc">Bishkek club that has played home games in Besh-Küngöy since matchday 8.</p><div class="team-links">
+          <a href="https://en.wikipedia.org/wiki/Asiagoal_Bishkek" target="_blank" rel="noopener">Wikipedia (EN)</a>
+          <a href="https://www.sofascore.com/football/team/asiagoal-bishkek/1078989" target="_blank" rel="noopener">Sofascore</a>
+          </div></li>
+        <li><span class="team-name">FC Toktogul</span><span class="team-city">Toktogul</span><p class="team-desc">From the town of Toktogul, by the reservoir of the same name.</p><div class="team-links">
+          <a href="https://www.sofascore.com/football/team/fc-toktogul/1168150" target="_blank" rel="noopener">Sofascore</a>
+          </div></li>
+        <li><span class="team-name">Ilbirs Bishkek</span><span class="team-city">Bishkek</span><p class="team-desc">Founded in 2018, one of the capital's youngest clubs; have played home games in Kant since matchday 9.</p><div class="team-links">
+          <a href="https://en.wikipedia.org/wiki/Ilbirs_Bishkek_FC" target="_blank" rel="noopener">Wikipedia (EN)</a>
+          <a href="https://www.sofascore.com/football/team/ilbirs-fc/307837" target="_blank" rel="noopener">Sofascore</a>
+          </div></li>
+        <li><span class="team-name">Abdysh-Ata</span><span class="team-city">Kant</span><p class="team-desc">From Kant, near Bishkek; 3 league titles in their history.</p><div class="team-links">
+          <a href="https://en.wikipedia.org/wiki/FC_Abdish-Ata_Kant" target="_blank" rel="noopener">Wikipedia (EN)</a>
+          <a href="https://www.sofascore.com/football/team/fk-abdysh-ata-kant/307625" target="_blank" rel="noopener">Sofascore</a>
+          </div></li>
+        <li><span class="team-name">Kyrgyzaltyn</span><span class="team-city">Kara-Balta</span><p class="team-desc">Club from Kara-Balta, tied to the state gold-mining company it's named after.</p><div class="team-links">
+          <a href="https://en.wikipedia.org/wiki/FC_Kara-Balta" target="_blank" rel="noopener">Wikipedia (EN)</a>
+          <a href="https://www.sofascore.com/football/team/fc-kyrgyzaltyn/515792" target="_blank" rel="noopener">Sofascore</a>
+          </div></li>
+      </ul>
     </section>
 
     <section id="top-scorers">

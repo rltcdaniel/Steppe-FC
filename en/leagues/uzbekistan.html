@@ -49,53 +49,103 @@
       <h2>Standings</h2>
       <div class="table-wrap">
       <table>
-        <thead><tr><th>Pos</th><th>Team</th><th>City</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>Pts</th></tr></thead>
+        <thead><tr><th>Pos</th><th>Team</th><th>City</th><th>P</th><th>Diff</th><th>Pts</th></tr></thead>
         <tbody>
-          <tr class="zone-qualify"><td>1</td><td>Neftchi Fergana</td><td>Fergana</td><td>19</td><td>14</td><td>3</td><td>2</td><td>45</td><td>10</td><td>45</td></tr>
-          <tr><td>2</td><td>Pakhtakor</td><td>Tashkent</td><td>19</td><td>11</td><td>7</td><td>1</td><td>31</td><td>18</td><td>40</td></tr>
-          <tr><td>3</td><td>Navbahor</td><td>Namangan</td><td>19</td><td>11</td><td>4</td><td>4</td><td>31</td><td>17</td><td>37</td></tr>
-          <tr><td>4</td><td>Buxoro</td><td>Bukhara</td><td>19</td><td>10</td><td>4</td><td>5</td><td>28</td><td>20</td><td>34</td></tr>
-          <tr><td>5</td><td>Lokomotiv</td><td>Tashkent</td><td>19</td><td>9</td><td>4</td><td>6</td><td>32</td><td>26</td><td>31</td></tr>
-          <tr><td>6</td><td>OKMK</td><td>Olmaliq</td><td>19</td><td>8</td><td>5</td><td>6</td><td>27</td><td>25</td><td>29</td></tr>
-          <tr><td>7</td><td>Andijon</td><td>Andijon</td><td>19</td><td>8</td><td>3</td><td>8</td><td>24</td><td>20</td><td>27</td></tr>
-          <tr><td>8</td><td>Dinamo Samarqand</td><td>Samarkand</td><td>19</td><td>7</td><td>5</td><td>7</td><td>29</td><td>30</td><td>26</td></tr>
-          <tr><td>9</td><td>Nasaf</td><td>Qarshi</td><td>19</td><td>6</td><td>7</td><td>6</td><td>20</td><td>18</td><td>25</td></tr>
-          <tr><td>10</td><td>Sogdiana</td><td>Jizzax</td><td>19</td><td>7</td><td>3</td><td>9</td><td>32</td><td>39</td><td>24</td></tr>
-          <tr><td>11</td><td>Qizilqum</td><td>Navoiy</td><td>19</td><td>7</td><td>2</td><td>10</td><td>17</td><td>26</td><td>23</td></tr>
-          <tr><td>12</td><td>Xorazm</td><td>Urganch</td><td>19</td><td>5</td><td>5</td><td>9</td><td>17</td><td>28</td><td>20</td></tr>
-          <tr><td>13</td><td>Surxon</td><td>Termiz</td><td>19</td><td>5</td><td>5</td><td>9</td><td>16</td><td>26</td><td>20</td></tr>
-          <tr><td>14</td><td>Kokand 1912</td><td>Kokand</td><td>19</td><td>4</td><td>7</td><td>8</td><td>17</td><td>26</td><td>19</td></tr>
-          <tr><td>15</td><td>Bunyodkor</td><td>Tashkent</td><td>19</td><td>6</td><td>1</td><td>12</td><td>20</td><td>31</td><td>19</td></tr>
-          <tr class="zone-relegate"><td>16</td><td>Mash'al</td><td>Muborak</td><td>19</td><td>1</td><td>1</td><td>17</td><td>8</td><td>34</td><td>4</td></tr>
+          <tr class="zone-qualify"><td>1</td><td>Neftchi Fergana</td><td>Fergana</td><td>19</td><td>+35</td><td>45</td></tr>
+          <tr class="zone-qualify"><td>2</td><td>Pakhtakor</td><td>Tashkent</td><td>19</td><td>+13</td><td>40</td></tr>
+          <tr><td>3</td><td>Navbahor</td><td>Namangan</td><td>19</td><td>+14</td><td>37</td></tr>
+          <tr><td>4</td><td>Buxoro</td><td>Bukhara</td><td>19</td><td>+8</td><td>34</td></tr>
+          <tr><td>5</td><td>OKMK</td><td>Olmaliq</td><td>20</td><td>+3</td><td>32</td></tr>
+          <tr><td>6</td><td>Lokomotiv</td><td>Tashkent</td><td>19</td><td>+6</td><td>31</td></tr>
+          <tr><td>7</td><td>Andijon</td><td>Andijon</td><td>19</td><td>+4</td><td>27</td></tr>
+          <tr><td>8</td><td>Dinamo Samarqand</td><td>Samarkand</td><td>19</td><td>-1</td><td>26</td></tr>
+          <tr><td>9</td><td>Nasaf</td><td>Qarshi</td><td>19</td><td>+2</td><td>25</td></tr>
+          <tr><td>10</td><td>Sogdiana</td><td>Jizzax</td><td>19</td><td>-7</td><td>24</td></tr>
+          <tr><td>11</td><td>Qizilqum</td><td>Navoiy</td><td>19</td><td>-9</td><td>23</td></tr>
+          <tr><td>12</td><td>Surkhon</td><td>Termiz</td><td>19</td><td>-10</td><td>20</td></tr>
+          <tr><td>13</td><td>Xorazm</td><td>Urganch</td><td>20</td><td>-12</td><td>20</td></tr>
+          <tr><td>14</td><td>Kokand 1912</td><td>Kokand</td><td>19</td><td>-9</td><td>19</td></tr>
+          <tr><td>15</td><td>Bunyodkor</td><td>Tashkent</td><td>19</td><td>-11</td><td>19</td></tr>
+          <tr class="zone-relegate"><td>16</td><td>Mash'al</td><td>Muborak</td><td>19</td><td>-26</td><td>4</td></tr>
         </tbody>
       </table>
       </div>
       <div class="zone-legend">
-        <span><span class="swatch qualify"></span>AFC Champions League Elite</span>
-        <span><span class="swatch relegate"></span>Relegation</span>
+        <span><span class="swatch qualify"></span>AFC (1: Champions League Elite · 2: Champions League 2)</span>
+        <span><span class="swatch relegate"></span>Direct relegation (plus a relegation playoff for positions 12-15)</span>
       </div>
-      <p class="note">Figures as of matchday 19, updated 1 September 2026 per RSSSF. Verify against the official source (pfl.uz) before publishing — the table changes weekly.</p>
+      <p class="note">Standings pulled from Sofascore (matchday 19-20 of 2026). Verify against pfl.uz before publishing — it changes weekly.</p>
     </section>
 
     <section id="teams">
       <h2>Teams</h2>
       <ul class="team-grid">
-        <li><span class="team-name">Neftchi Fergana</span><span class="team-city">Fergana</span><span class="team-note">reigning champions; successfully defended their 2025 title.</span></li>
-        <li><span class="team-name">Pakhtakor</span><span class="team-city">Tashkent</span><span class="team-note">the club with the most league titles in history.</span></li>
-        <li><span class="team-name">Navbahor</span><span class="team-city">Namangan</span><span class="team-note">played home games in Tashkent (280 km from Namangan) until matchday 15.</span></li>
-        <li><span class="team-name">Buxoro</span><span class="team-city">Bukhara</span></li>
-        <li><span class="team-name">Lokomotiv</span><span class="team-city">Tashkent</span></li>
-        <li><span class="team-name">OKMK</span><span class="team-city">Olmaliq</span><span class="team-note">short for Olmaliq Kon-Metallurgiya Kombinati, the mining and metallurgical complex the club is named after.</span></li>
-        <li><span class="team-name">Andijon</span><span class="team-city">Andijon</span></li>
-        <li><span class="team-name">Dinamo Samarqand</span><span class="team-city">Samarkand</span></li>
-        <li><span class="team-name">Nasaf</span><span class="team-city">Qarshi</span></li>
-        <li><span class="team-name">Sogdiana</span><span class="team-city">Jizzax</span><span class="team-note">have played home games in Zomin (60 km from Jizzax) since matchday 8.</span></li>
-        <li><span class="team-name">Qizilqum</span><span class="team-city">Navoiy</span></li>
-        <li><span class="team-name">Xorazm</span><span class="team-city">Urganch</span></li>
-        <li><span class="team-name">Surxon</span><span class="team-city">Termiz</span></li>
-        <li><span class="team-name">Kokand 1912</span><span class="team-city">Kokand</span></li>
-        <li><span class="team-name">Bunyodkor</span><span class="team-city">Tashkent</span></li>
-        <li><span class="team-name">Mash'al</span><span class="team-city">Muborak</span><span class="team-note">play home games in G'uzor (135 km from Muborak); currently bottom of the table.</span></li>
+        <li><span class="team-name">Neftchi Fergana</span><span class="team-city">Fergana</span><p class="team-desc">Founded in 1962, nicknamed "the Tigers"; financed by the Fergana oil refinery. Six-time champions of Uzbekistan, and reigning champions after defending their 2025 title.</p><div class="team-links">
+          <a href="https://en.wikipedia.org/wiki/FC_Neftchi_Fergana" target="_blank" rel="noopener">Wikipedia (EN)</a>
+          <a href="https://www.sofascore.com/football/team/neftchi-fargona/36256" target="_blank" rel="noopener">Sofascore</a>
+          <a href="https://fcneftchi.uz" target="_blank" rel="noopener">Official site</a>
+          </div></li>
+        <li><span class="team-name">Pakhtakor</span><span class="team-city">Tashkent</span><p class="team-desc">Founded in 1956, by far the most successful club in Uzbekistan. Their name means "cotton grower", reflecting the country's agricultural heritage.</p><div class="team-links">
+          <a href="https://en.wikipedia.org/wiki/Pakhtakor_FC" target="_blank" rel="noopener">Wikipedia (EN)</a>
+          <a href="https://www.sofascore.com/football/team/pakhtakor-tashkent/34310" target="_blank" rel="noopener">Sofascore</a>
+          <a href="https://www.pakhtakor.uz" target="_blank" rel="noopener">Official site</a>
+          </div></li>
+        <li><span class="team-name">Navbahor</span><span class="team-city">Namangan</span><p class="team-desc">Founded in 1978, based in Namangan, in the heart of the Fergana Valley. Their name means "new spring"; one of only three clubs to have played every season of the league since independence.</p><div class="team-links">
+          <a href="https://en.wikipedia.org/wiki/PFC_Navbahor_Namangan" target="_blank" rel="noopener">Wikipedia (EN)</a>
+          <a href="https://www.sofascore.com/football/team/navbahor-namangan/40263" target="_blank" rel="noopener">Sofascore</a>
+          <a href="https://pfcnavbahor.uz" target="_blank" rel="noopener">Official site</a>
+          </div></li>
+        <li><span class="team-name">Buxoro</span><span class="team-city">Bukhara</span><p class="team-desc">Club from the historic city of Bukhara, one of the oldest cities in Central Asia.</p><div class="team-links">
+          <a href="https://en.wikipedia.org/wiki/FC_Bukhara" target="_blank" rel="noopener">Wikipedia (EN)</a>
+          <a href="https://www.sofascore.com/football/team/fc-buxoro/48613" target="_blank" rel="noopener">Sofascore</a>
+          </div></li>
+        <li><span class="team-name">OKMK</span><span class="team-city">Olmaliq</span><p class="team-desc">Founded in 2004, owned by the Olmaliq mining and metallurgical complex (hence the initials); nicknamed "the Miners".</p><div class="team-links">
+          <a href="https://en.wikipedia.org/wiki/FC_AGMK" target="_blank" rel="noopener">Wikipedia (EN)</a>
+          <a href="https://www.sofascore.com/football/team/fc-agmk/40268" target="_blank" rel="noopener">Sofascore</a>
+          </div></li>
+        <li><span class="team-name">Lokomotiv</span><span class="team-city">Tashkent</span><p class="team-desc">Founded in 2002, owned by Uzbek Railways.</p><div class="team-links">
+          <a href="https://en.wikipedia.org/wiki/PFC_Lokomotiv_Tashkent" target="_blank" rel="noopener">Wikipedia (EN)</a>
+          <a href="https://www.sofascore.com/football/team/lokomotiv-tashkent/40261" target="_blank" rel="noopener">Sofascore</a>
+          <a href="https://lokomotiv.uz" target="_blank" rel="noopener">Official site</a>
+          </div></li>
+        <li><span class="team-name">Andijon</span><span class="team-city">Andijon</span><p class="team-desc">Club from the city of Andijan, at the eastern edge of the Fergana Valley.</p><div class="team-links">
+          <a href="https://www.sofascore.com/football/team/pfk-andijon/40267" target="_blank" rel="noopener">Sofascore</a>
+          </div></li>
+        <li><span class="team-name">Dinamo Samarqand</span><span class="team-city">Samarkand</span><p class="team-desc">One of Uzbekistan's oldest clubs, founded in 1960; has changed name numerous times throughout its history.</p><div class="team-links">
+          <a href="https://en.wikipedia.org/wiki/FC_Dinamo_Samarqand" target="_blank" rel="noopener">Wikipedia (EN)</a>
+          <a href="https://www.sofascore.com/football/team/dinamo-samarqand/40259" target="_blank" rel="noopener">Sofascore</a>
+          <a href="https://www.fcdinamo.uz" target="_blank" rel="noopener">Official site</a>
+          </div></li>
+        <li><span class="team-name">Nasaf</span><span class="team-city">Qarshi</span><p class="team-desc">Founded in 1986 in Qarshi, nicknamed "the Dragons"; one of the country's leading clubs over the last two decades.</p><div class="team-links">
+          <a href="https://en.wikipedia.org/wiki/FC_Nasaf" target="_blank" rel="noopener">Wikipedia (EN)</a>
+          <a href="https://www.sofascore.com/football/team/nasaf-qarshi/34017" target="_blank" rel="noopener">Sofascore</a>
+          <a href="https://www.fcnasaf.uz" target="_blank" rel="noopener">Official site</a>
+          </div></li>
+        <li><span class="team-name">Sogdiana</span><span class="team-city">Jizzax</span><p class="team-desc">Founded in 1970 in Jizzakh, named after the ancient historical region of Sogdia.</p><div class="team-links">
+          <a href="https://en.wikipedia.org/wiki/FC_Sogdiana" target="_blank" rel="noopener">Wikipedia (EN)</a>
+          <a href="https://www.sofascore.com/football/team/fc-sogdiana-jizzakh/48614" target="_blank" rel="noopener">Sofascore</a>
+          <a href="https://www.fcsogdiana.uz" target="_blank" rel="noopener">Official site</a>
+          </div></li>
+        <li><span class="team-name">Qizilqum</span><span class="team-city">Navoiy</span><p class="team-desc">Club from Navoiy, in the centre of the country, near the Kyzylkum desert the team is named after.</p><div class="team-links">
+          <a href="https://www.sofascore.com/football/team/pfk-qizilqum/40265" target="_blank" rel="noopener">Sofascore</a>
+          </div></li>
+        <li><span class="team-name">Surkhon</span><span class="team-city">Termiz</span><p class="team-desc">Founded in 1968 in Termez, a border city with Afghanistan at Uzbekistan's southern tip.</p><div class="team-links">
+          <a href="https://en.wikipedia.org/wiki/FC_Surkhon" target="_blank" rel="noopener">Wikipedia (EN)</a>
+          <a href="https://www.sofascore.com/football/team/surkhon-termez/287019" target="_blank" rel="noopener">Sofascore</a>
+          </div></li>
+        <li><span class="team-name">Xorazm</span><span class="team-city">Urganch</span><p class="team-desc">Represents Urgench, in the historic Khorezm region, by the delta of the Amu Darya river.</p><div class="team-links">
+          <a href="https://www.sofascore.com/football/team/pfk-xorazm/40260" target="_blank" rel="noopener">Sofascore</a>
+          </div></li>
+        <li><span class="team-name">Kokand 1912</span><span class="team-city">Kokand</span><p class="team-desc">Club from the historic city of Kokand; the "1912" in the name points back to the club's origins in football under the Russian Empire.</p><div class="team-links">
+          <a href="https://www.sofascore.com/football/team/fk-kokand-1912/191273" target="_blank" rel="noopener">Sofascore</a>
+          </div></li>
+        <li><span class="team-name">Bunyodkor</span><span class="team-city">Tashkent</span><p class="team-desc">Founded in 2005 in Tashkent as a high-ambition project: once signed Rivaldo and hired Zico and Luiz Felipe Scolari as coaches.</p><div class="team-links">
+          <a href="https://en.wikipedia.org/wiki/FC_Bunyodkor" target="_blank" rel="noopener">Wikipedia (EN)</a>
+          <a href="https://www.sofascore.com/football/team/fc-bunyodkor/23481" target="_blank" rel="noopener">Sofascore</a>
+          </div></li>
+        <li><span class="team-name">Mash'al</span><span class="team-city">Muborak</span><p class="team-desc">Represents Muborak, a town tied to the natural gas industry, in the Kashkadarya region.</p><div class="team-links">
+          <a href="https://www.sofascore.com/football/team/mash-al-mubarek/40264" target="_blank" rel="noopener">Sofascore</a>
+          </div></li>
       </ul>
       <p class="note">Fun fact: several clubs have played part of the season as home side in a different city (Sogdiana in Zomin, Mash'al in G'uzor, Navbahor in Tashkent until matchday 15) — the same phenomenon seen in Kazakhstan.</p>
     </section>
