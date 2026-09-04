@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- TODO: revisar/completar segun contenido final -->
+  <url><loc>https://steppefc.com/es/</loc><xhtml:link rel="alternate" hreflang="es" href="https://steppefc.com/es/"/><xhtml:link rel="alternate" hreflang="en" href="https://steppefc.com/en/"/></url>
+  <url><loc>https://steppefc.com/en/</loc><xhtml:link rel="alternate" hreflang="es" href="https://steppefc.com/es/"/><xhtml:link rel="alternate" hreflang="en" href="https://steppefc.com/en/"/></url>
+  <url><loc>https://steppefc.com/es/noticias/</loc></url>
+  <url><loc>https://steppefc.com/en/news/</loc></url>
+  <url><loc>https://steppefc.com/es/blog/</loc></url>
+  <url><loc>https://steppefc.com/en/blog/</loc></url>
+  <url><loc>https://steppefc.com/es/jugadores/</loc></url>
+  <url><loc>https://steppefc.com/en/players/</loc></url>
+  <url><loc>https://steppefc.com/es/ligas/</loc></url>
+  <url><loc>https://steppefc.com/en/leagues/</loc></url>
+  <url><loc>https://steppefc.com/es/ligas/kazajistan.html</loc></url>
+  <url><loc>https://steppefc.com/es/ligas/uzbekistan.html</loc></url>
+  <url><loc>https://steppefc.com/es/ligas/turkmenistan.html</loc></url>
+  <url><loc>https://steppefc.com/es/ligas/kirguistan.html</loc></url>
+  <url><loc>https://steppefc.com/es/ligas/tayikistan.html</loc></url>
+  <url><loc>https://steppefc.com/en/leagues/kazakhstan.html</loc></url>
+  <url><loc>https://steppefc.com/en/leagues/uzbekistan.html</loc></url>
+  <url><loc>https://steppefc.com/en/leagues/turkmenistan.html</loc></url>
+  <url><loc>https://steppefc.com/en/leagues/kyrgyzstan.html</loc></url>
+  <url><loc>https://steppefc.com/en/leagues/tajikistan.html</loc></url>
+  <url><loc>https://steppefc.com/es/espanoles/</loc></url>
+  <url><loc>https://steppefc.com/en/spanish-players/</loc></url>
+  <url><loc>https://steppefc.com/es/servicios.html</loc></url>
+  <url><loc>https://steppefc.com/en/services.html</loc></url>
+  <url><loc>https://steppefc.com/es/sobre-nosotros.html</loc></url>
+  <url><loc>https://steppefc.com/en/about.html</loc></url>
+  <url><loc>https://steppefc.com/es/contacto.html</loc></url>
+  <url><loc>https://steppefc.com/en/contact.html</loc></url>
+</urlset>
