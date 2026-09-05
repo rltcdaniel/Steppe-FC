@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <!-- TODO: revisar/completar segun contenido final -->
   <url><loc>https://steppefc.com/es/</loc><xhtml:link rel="alternate" hreflang="es" href="https://steppefc.com/es/"/><xhtml:link rel="alternate" hreflang="en" href="https://steppefc.com/en/"/></url>
   <url><loc>https://steppefc.com/en/</loc><xhtml:link rel="alternate" hreflang="es" href="https://steppefc.com/es/"/><xhtml:link rel="alternate" hreflang="en" href="https://steppefc.com/en/"/></url>
   <url><loc>https://steppefc.com/es/blog/</loc></url>

@@ -116,9 +116,23 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 2.5rem 1.25rem 4rem
   border: 1px solid #CBE3D0;
 }
 .hero .tagline { color: var(--muted); max-width: 46ch; font-size: 1.08rem; }
-.route-map { width: 100%; height: auto; margin-top: 2rem; }
+.route-map { width: 100%; height: auto; margin-top: 2rem; max-width: 720px; display: block; }
 .route-map text { font-family: 'IBM Plex Sans', sans-serif; }
+.route-map a { cursor: pointer; }
+.route-map a circle { transition: transform 0.15s ease; transform-box: fill-box; transform-origin: center; }
+.route-map a:hover circle, .route-map a:focus circle { transform: scale(1.3); }
+.route-map a:hover text, .route-map a:focus text { text-decoration: underline; }
 .photo-note { font-size: 0.8rem; color: var(--muted); margin-top: 1.5rem; padding-top: 1rem; border-top: 1px dashed #CBE3D0; }
+
+/* Home: seccion de exploracion bajo el hero */
+.home-explore-head { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.25rem; }
+.home-explore-head .see-all { font-size: 0.85rem; font-weight: 600; color: var(--accent-ink); text-decoration: none; white-space: nowrap; }
+.home-explore-head .see-all:hover { text-decoration: underline; }
+.home-links { list-style: none; margin: 2.75rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+.home-links li a { display: block; border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: 8px; padding: 1rem 1.15rem; background: var(--surface); text-decoration: none; transition: transform 0.15s ease; }
+.home-links li a:hover { transform: translateY(-2px); }
+.home-links h3 { margin: 0 0 0.3rem; font-size: 1rem; font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; color: var(--ink); }
+.home-links p { margin: 0; font-size: 0.85rem; color: var(--muted); }
 
 .lang-picker { text-align: left; padding-top: 3rem; }
 .lang-picker .lang-links { margin-top: 1.5rem; display: flex; gap: 0.75rem; }
@@ -126,13 +140,47 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 2.5rem 1.25rem 4rem
 .lang-picker .lang-links a:hover { border-color: var(--accent); }
 
 /* Country grid (hub de Ligas) */
-.country-grid { list-style: none; margin: 1.5rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 1.1rem; }
-.country-card { display: block; border-radius: var(--radius); overflow: hidden; text-decoration: none; color: var(--ink); background: var(--surface); border: 1px solid var(--border); transition: transform 0.15s ease; }
-.country-card:hover { transform: translateY(-2px); }
+.lead-text { font-size: 1.05rem; color: var(--ink); max-width: 68ch; }
+.lead-text.muted { color: var(--muted); }
+.country-grid { list-style: none; margin: 1.5rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 1.1rem; }
+.country-card { display: block; border-radius: var(--radius); overflow: hidden; text-decoration: none; color: var(--ink); background: var(--surface); border: 1px solid var(--border); transition: transform 0.15s ease, box-shadow 0.15s ease; }
+.country-card:hover { transform: translateY(-3px); box-shadow: 0 10px 20px -12px rgba(26,35,48,0.25); }
 .country-card-banner { display: block; padding: 1.5rem 1.2rem 1.15rem; background: linear-gradient(135deg, var(--card-accent, var(--accent)), var(--card-accent-dark, var(--accent-ink))); }
 .country-card .country-name { color: #fff; font-size: 1.35rem; display: block; }
-.country-card-body { display: block; padding: 0.85rem 1.2rem 1.1rem; }
-.country-card .country-teaser { color: var(--muted); font-size: 0.85rem; }
+.country-card .country-league { display: block; color: rgba(255,255,255,0.85); font-size: 0.76rem; margin-top: 0.2rem; }
+.country-card-body { display: block; padding: 0.9rem 1.2rem 1.05rem; }
+.country-stats { display: block; font-size: 0.88rem; margin-bottom: 0.4rem; }
+.country-stats strong { color: var(--ink); }
+.country-fact { display: block; font-size: 0.8rem; color: var(--muted); margin-bottom: 0.7rem; line-height: 1.45; }
+.country-cta { display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.78rem; font-weight: 600; color: var(--card-accent-dark, var(--accent-ink)); }
+.country-card:hover .country-cta { text-decoration: underline; }
+
+/* Comparativa "de un vistazo" */
+.league-compare th, .league-compare td { white-space: nowrap; }
+tr.accent-row td:first-child { box-shadow: inset 4px 0 0 var(--row-accent, var(--accent)); }
+tr.accent-row .league-name { font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem; }
+tr.accent-row .swatch { width: 9px; height: 9px; border-radius: 50%; background: var(--row-accent, var(--accent)); flex: none; }
+tr.accent-row .league-name a { color: var(--ink); text-decoration: none; }
+tr.accent-row .league-name a:hover { color: var(--accent-ink); text-decoration: underline; }
+
+/* Pilares (Sobre nosotros) */
+.pillar-grid { list-style: none; margin: 1rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.1rem; }
+.pillar-grid li { border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: 8px; padding: 1.15rem 1.25rem; background: var(--surface); }
+.pillar-grid h3 { margin: 0 0 0.45rem; font-size: 1.05rem; font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; color: var(--ink); }
+.pillar-grid p { margin: 0; font-size: 0.88rem; color: var(--muted); }
+
+/* Lista de valores / metodo (Sobre nosotros) */
+.value-list { list-style: none; margin: 1rem 0 0; padding: 0; display: flex; flex-direction: column; gap: 0.85rem; }
+.value-list li { display: flex; gap: 0.85rem; align-items: baseline; }
+.value-list .value-mark { flex: none; width: 26px; height: 26px; border-radius: 50%; background: color-mix(in srgb, var(--accent) 16%, var(--surface)); color: var(--accent-ink); font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: 0.85rem; display: inline-flex; align-items: center; justify-content: center; }
+.value-list p { margin: 0; }
+.value-list strong { color: var(--ink); }
+.value-list span.value-text { color: var(--muted); font-size: 0.92rem; }
+
+.cta-box { border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem 1.6rem; background: var(--surface); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; }
+.cta-box p { margin: 0; color: var(--muted); font-size: 0.92rem; }
+.cta-button { flex: none; display: inline-block; background: var(--ink); color: #fff; text-decoration: none; padding: 0.65rem 1.3rem; border-radius: 999px; font-weight: 600; font-size: 0.9rem; }
+.cta-button:hover { background: var(--accent-ink); color: #fff; }
 
 /* Banner de pais */
 .country-banner {
