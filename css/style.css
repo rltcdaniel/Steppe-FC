@@ -229,6 +229,20 @@ tr.zone-relegate td:first-child { box-shadow: inset 4px 0 0 #B23A2E; }
 /* Placeholder / estado vacio */
 .placeholder { border-left: 4px solid var(--country-accent); border-radius: 8px; padding: 1rem 1.2rem; color: var(--muted); font-size: 0.9rem; background: color-mix(in srgb, var(--country-accent) 6%, var(--surface)); }
 
+/* Fichas de jugador (Jugadores Españoles) */
+.player-card { border: 1px solid var(--border); border-left: 4px solid var(--country-accent); border-radius: var(--radius); padding: 1.5rem 1.6rem; background: var(--surface); margin-bottom: 1.75rem; }
+.player-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.5rem 1rem; margin-bottom: 0.15rem; }
+.player-head h3 { margin: 0; font-size: 1.4rem; }
+.player-badge { display: inline-block; font-size: 0.72rem; font-weight: 600; padding: 0.25rem 0.65rem; border-radius: 999px; background: color-mix(in srgb, var(--country-accent) 16%, var(--surface)); color: var(--country-accent-dark); white-space: nowrap; }
+.player-meta { color: var(--muted); font-size: 0.85rem; margin: 0 0 1rem; }
+.player-card h4 { font-size: 0.8rem; margin: 1.2rem 0 0.6rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; font-family: 'IBM Plex Sans', sans-serif; font-weight: 600; border: none; padding: 0; }
+.player-card .note { margin-top: 0.8rem; }
+.player-index { list-style: none; margin: 1.5rem 0 2.5rem; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.7rem; }
+.player-index a { display: block; border: 1px solid var(--border); border-left: 4px solid var(--country-accent); border-radius: 8px; padding: 0.7rem 0.9rem; background: var(--surface); text-decoration: none; color: var(--ink); font-size: 0.88rem; }
+.player-index a:hover { border-color: var(--country-accent); }
+.player-index .idx-name { font-weight: 600; display: block; }
+.player-index .idx-meta { color: var(--muted); font-size: 0.78rem; }
+
 .note { font-size: 0.85rem; color: var(--muted); margin-top: 0.6rem; }
 section { margin-bottom: 2.75rem; }
 
