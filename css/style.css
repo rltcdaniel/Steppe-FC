@@ -290,6 +290,23 @@ tr.zone-relegate td:first-child { box-shadow: inset 4px 0 0 #B23A2E; }
 .fm-tl-stats { font-size: 0.78rem; color: var(--muted); margin-top: 0.15rem; }
 .fm-tl-stats strong { color: var(--ink); }
 
+/* Estadisticas de temporada y percentiles (FotMob/Soccerway) */
+.fm-season-box { border: 1px dashed var(--border); border-radius: var(--radius); padding: 1rem 1.2rem; margin-bottom: 1.8rem; font-size: 0.88rem; color: var(--ink); background: color-mix(in srgb, var(--country-accent) 6%, var(--surface)); }
+.fm-season-box .fm-season-label { display: block; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 0.35rem; }
+.fm-traits { margin: 0 0 0.3rem; }
+.fm-trait-row { display: grid; grid-template-columns: 150px 1fr 36px; align-items: center; gap: 0.7rem; margin-bottom: 0.55rem; font-size: 0.82rem; }
+.fm-trait-label { color: var(--muted); }
+.fm-trait-bar { height: 8px; border-radius: 999px; background: var(--border); overflow: hidden; }
+.fm-trait-fill { height: 100%; background: linear-gradient(90deg, var(--country-accent), var(--country-accent-dark)); border-radius: 999px; }
+.fm-trait-value { text-align: right; font-weight: 700; color: var(--ink); font-family: 'Big Shoulders Display', sans-serif; }
+.fm-trait-caption { font-size: 0.78rem; color: var(--muted); margin: 0.4rem 0 1.8rem; }
+
+/* Informe del ojeador */
+.fm-scout { border: 1px solid var(--border); border-left: 4px solid var(--country-accent); border-radius: var(--radius); padding: 1.3rem 1.5rem; background: var(--surface); margin-bottom: 1.6rem; }
+.fm-scout-byline { display: flex; align-items: center; gap: 0.55rem; margin-bottom: 0.8rem; font-size: 0.76rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+.fm-scout-badge { flex: none; width: 24px; height: 24px; border-radius: 50%; background: var(--country-accent); display: inline-flex; align-items: center; justify-content: center; color: #fff; font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: 0.95rem; }
+.fm-scout p { margin: 0; }
+
 .note { font-size: 0.85rem; color: var(--muted); margin-top: 0.6rem; }
 section { margin-bottom: 2.75rem; }
 
