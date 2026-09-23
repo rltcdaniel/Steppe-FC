@@ -108,23 +108,30 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 2.5rem 1.25rem 4rem
   .footer-top { grid-template-columns: 1fr; gap: 1.5rem; }
 }
 
-/* Hero (home) -- textura de cesped */
+/* Hero (home) */
 .hero {
   background: repeating-linear-gradient(135deg, #E3F1E6 0px, #E3F1E6 42px, #D9EBDC 42px, #D9EBDC 84px);
   border-radius: var(--radius);
   padding: 2.6rem 2rem;
   border: 1px solid #CBE3D0;
+  margin-bottom: 4rem;
 }
 .hero .tagline { color: var(--muted); max-width: 46ch; font-size: 1.08rem; }
-.route-map { width: 100%; height: auto; margin-top: 2rem; max-width: 720px; display: block; }
-.route-map text { font-family: 'IBM Plex Sans', sans-serif; }
-.route-map a { cursor: pointer; }
-.route-map a circle { transition: transform 0.15s ease; transform-box: fill-box; transform-origin: center; }
-.route-map a:hover circle, .route-map a:focus circle { transform: scale(1.3); }
-.route-map a:hover text, .route-map a:focus text { text-decoration: underline; }
+.hero-image-wrap { margin-top: 2rem; border-radius: 12px; overflow: hidden; border: 1px solid #CBE3D0; line-height: 0; }
+.hero-image { width: 100%; height: auto; display: block; }
+.hero-country-links { list-style: none; margin: 1.4rem 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.hero-country-links a { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.4rem 0.9rem; border-radius: 999px; text-decoration: none; font-size: 0.85rem; font-weight: 600; color: #fff; background: var(--country-accent); }
+.hero-country-links a:hover { filter: brightness(0.92); }
+.hero-country-links a::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.85); }
+.hero-country-links a.kz { --country-accent: #00AFCA; }
+.hero-country-links a.uz { --country-accent: #1EB53A; }
+.hero-country-links a.tm { --country-accent: #8C1F3C; }
+.hero-country-links a.kg { --country-accent: #E8112D; }
+.hero-country-links a.tj { --country-accent: #D8A400; }
 .photo-note { font-size: 0.8rem; color: var(--muted); margin-top: 1.5rem; padding-top: 1rem; border-top: 1px dashed #CBE3D0; }
 
 /* Home: seccion de exploracion bajo el hero */
+.home-section { margin-top: 1rem; margin-bottom: 4rem; }
 .home-explore-head { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.25rem; }
 .home-explore-head .see-all { font-size: 0.85rem; font-weight: 600; color: var(--accent-ink); text-decoration: none; white-space: nowrap; }
 .home-explore-head .see-all:hover { text-decoration: underline; }
@@ -142,13 +149,16 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 2.5rem 1.25rem 4rem
 /* Country grid (hub de Ligas) */
 .lead-text { font-size: 1.05rem; color: var(--ink); max-width: 68ch; }
 .lead-text.muted { color: var(--muted); }
-.country-grid { list-style: none; margin: 1.5rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 1.1rem; }
+.country-grid { list-style: none; margin: 1.5rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.9rem; }
+@media (max-width: 900px) { .country-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 640px) { .country-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 420px) { .country-grid { grid-template-columns: 1fr; } }
 .country-card { display: block; border-radius: var(--radius); overflow: hidden; text-decoration: none; color: var(--ink); background: var(--surface); border: 1px solid var(--border); transition: transform 0.15s ease, box-shadow 0.15s ease; }
 .country-card:hover { transform: translateY(-3px); box-shadow: 0 10px 20px -12px rgba(26,35,48,0.25); }
-.country-card-banner { display: block; padding: 1.5rem 1.2rem 1.15rem; background: linear-gradient(135deg, var(--card-accent, var(--accent)), var(--card-accent-dark, var(--accent-ink))); }
-.country-card .country-name { color: #fff; font-size: 1.35rem; display: block; }
+.country-card-banner { display: block; padding: 1.3rem 1rem 1.05rem; background: linear-gradient(135deg, var(--card-accent, var(--accent)), var(--card-accent-dark, var(--accent-ink))); }
+.country-card .country-name { color: #fff; font-size: 1.18rem; display: block; }
 .country-card .country-league { display: block; color: rgba(255,255,255,0.85); font-size: 0.76rem; margin-top: 0.2rem; }
-.country-card-body { display: block; padding: 0.9rem 1.2rem 1.05rem; }
+.country-card-body { display: block; padding: 0.85rem 1rem 1rem; }
 .country-stats { display: block; font-size: 0.88rem; margin-bottom: 0.4rem; }
 .country-stats strong { color: var(--ink); }
 .country-fact { display: block; font-size: 0.8rem; color: var(--muted); margin-bottom: 0.7rem; line-height: 1.45; }
