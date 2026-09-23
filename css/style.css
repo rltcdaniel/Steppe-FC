@@ -117,7 +117,7 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 2.5rem 1.25rem 4rem
   margin-bottom: 4rem;
 }
 .hero .tagline { color: var(--muted); max-width: 46ch; font-size: 1.08rem; }
-.hero-image-wrap { margin-top: 2rem; border-radius: 12px; overflow: hidden; border: 1px solid #CBE3D0; line-height: 0; }
+.hero-image-wrap { margin-top: 2rem; border-radius: 12px; overflow: hidden; line-height: 0; }
 .hero-image { width: 100%; height: auto; display: block; }
 .hero-country-links { list-style: none; margin: 1.4rem 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.6rem; }
 .hero-country-links a { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.4rem 0.9rem; border-radius: 999px; text-decoration: none; font-size: 0.85rem; font-weight: 600; color: #fff; background: var(--country-accent); }
@@ -128,7 +128,6 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 2.5rem 1.25rem 4rem
 .hero-country-links a.tm { --country-accent: #8C1F3C; }
 .hero-country-links a.kg { --country-accent: #E8112D; }
 .hero-country-links a.tj { --country-accent: #D8A400; }
-.photo-note { font-size: 0.8rem; color: var(--muted); margin-top: 1.5rem; padding-top: 1rem; border-top: 1px dashed #CBE3D0; }
 
 /* Home: seccion de exploracion bajo el hero */
 .home-section { margin-top: 1rem; margin-bottom: 4rem; }
