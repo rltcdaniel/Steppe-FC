@@ -313,6 +313,8 @@ tr.zone-relegate td:first-child { box-shadow: inset 4px 0 0 #B23A2E; }
 .fm-scout-byline { display: flex; align-items: center; gap: 0.55rem; margin-bottom: 0.8rem; font-size: 0.76rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
 .fm-scout-badge { flex: none; width: 24px; height: 24px; border-radius: 50%; background: var(--country-accent); display: inline-flex; align-items: center; justify-content: center; color: #fff; font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: 0.95rem; }
 .fm-scout p { margin: 0; }
+.fm-scout .fm-scout-season { margin: 0 0 0.9rem; padding-bottom: 0.9rem; border-bottom: 1px dashed var(--border); font-size: 0.88rem; }
+.fm-scout .fm-scout-season strong { color: var(--country-accent-dark); }
 
 .note { font-size: 0.85rem; color: var(--muted); margin-top: 0.6rem; }
 section { margin-bottom: 2.75rem; }
